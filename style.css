@@ -224,6 +224,18 @@ body{
 .post .card{
     border: none;
 }
+.media-fixed {
+  height: 220px; /* ajuste conforme desejar */
+  object-fit: cover;
+}
+
+.card {
+  height: 100%;
+}
+
+
+
+
 
 /* testimonial section starts */
 .testimonial img:hover{

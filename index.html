@@ -297,107 +297,113 @@
   <!-- skill section end here -->
 
   <!-- portfolio section starts here -->
-  <section class="portfolio" id="portfolio">
-    <div class="heading text-center pt-5">
-      <!---<small>Creative Work</small>-->
-      <h3>Portfolio</h3>
-    </div>
+<section class="portfolio" id="portfolio">
+  <div class="heading text-center pt-5">
+    <h3>Portfolio</h3>
+  </div>
 
-    <div id="myBtnContainer" class="text-center mt-4">
-      <!-- here we will create custom attribute using data- for filtering -->
-      <button class="filter-item" data-filter="all">All</button>
-      <button class="filter-item" data-filter="game">Game</button>
-      <button class="filter-item" data-filter="front">Front-End</button>
-      <button class="filter-item" data-filter="back">Back-End</button>
-      <!--<button class="filter-item" data-filter="brand">Brand</button>-->
-    </div>
+  <div id="myBtnContainer" class="text-center mt-4">
+    <button class="filter-item" data-filter="all">All</button>
+    <button class="filter-item" data-filter="game">Game</button>
+    <button class="filter-item" data-filter="front">Front-End</button>
+    <button class="filter-item" data-filter="back">Back-End</button>
+  </div>
     
-  
-    <div class="portfolio-body">
-      <div class="row justify-content-evenly px-4">
+  <div class="portfolio-body">
+    <div class="row justify-content-evenly px-4">
+
+      <!-- Card 1 -->
+      <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
+        <div class="card h-100">
+          <img src="images/gamepython.png" class="card-img-top media-fixed" alt="Game Python" />
+          <div class="card-body text-center">
+            <h4 class="card-title">Game</h4>
+            <span class="badge bg-secondary badge-pill">Python</span>
+            <span class="badge bg-secondary badge-pill mb-2">Game</span><br />
+            <a href="#" class="link">Read More</a>
+          </div>
+        </div>
+      </div>
+
 
         
-        <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
-          <div class="card">
-            <img src="images/gamepython.png" class="card-img-top" alt="..." />
-            <div class="card-body text-center">
-              <h4 class="card-title">Game</h4>
-              <span class="badge bg-secondary badge-pill">Python</span>
-              <span class="badge bg-secondary badge-pill mb-2">Game</span><br />
-              <a href="#" class="link">Read More</a>
-            </div>
+        <!-- Card 2 -->
+      <div class="post col-md-4 front all col-10 mt-3 mt-md-0" data-aos="fade-up">
+        <div class="card h-100">
+          <img src="images/html_redes_sociais.png" class="card-img-top media-fixed" alt="Página Interactiva" />
+          <div class="card-body text-center">
+            <h4 class="card-title">Pagina Interactiva</h4>
+            <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+            <span class="badge bg-secondary badge-pill">JavaScript</span>
+            <span class="badge bg-secondary badge-pill mb-2">VsCode</span><br />
+            <a href="#" class="read-more-btn link">Read More</a>
           </div>
         </div>
-        
-        <div class="post col-md-4 front all col-10 mt-3 mt-md-0" data-aos="fade-up">
-          <div class="card">
-            <img src="images/html_redes_sociais.png" class="card-img-top" alt="..." />
-            <div class="card-body text-center">
-              <h4 class="card-title">Pagina Interactiva</h4>
-              <span class="badge bg-secondary badge-pill">HTML&CSS</span>
-              <span class="badge bg-secondary badge-pill">JavaScript</span>
-              <span class="badge bg-secondary badge-pill mb-2">VsCode</span><br />
-              <a href="#" class="read-more-btn link">Read More</a>
-            </div>
-          </div>
-        </div>
+      </div>
                
-        <div class="post col-md-4 back all col-10 mt-3 mt-md-0" data-aos="fade-up">
-          <div class="card">
-            <img src="images/RESTAUR.png" class="card-img-top" alt="..." />
-            <div class="card-body text-center">
-              <h4 class="card-title">Facturaçao de Restaurante</h4>
-              <span class="badge bg-secondary badge-pill">Python</span>
-              <span class="badge bg-secondary badge-pill">Tkinter</span>
-              <br />
-              <a href="#" class="read-more-btn link">Read More</a>
-            </div>
+       <!-- Card 3 -->
+      <div class="post col-md-4 back all col-10 mt-3 mt-md-0" data-aos="fade-up">
+        <div class="card h-100">
+          <img src="images/RESTAUR.png" class="card-img-top media-fixed" alt="Facturação" />
+          <div class="card-body text-center">
+            <h4 class="card-title">Facturaçao de Restaurante</h4>
+            <span class="badge bg-secondary badge-pill">Python</span>
+            <span class="badge bg-secondary badge-pill">Tkinter</span><br />
+            <a href="#" class="read-more-btn link">Read More</a>
+          </div>
+        </div>
+      </div> 
+      
+
+    <!-- Card 4 - VÍDEO -->
+      <div class="post col-md-4 back all col-10 mt-3 mt-md-4" data-aos="fade-up">
+        <div class="card h-100">
+          <video class="card-img-top media-fixed" controls>
+            <source src="images/GrabaciónCPF.mp4" type="video/mp4" />
+            Seu navegador não suporta vídeos em HTML5.
+          </video>
+          <div class="card-body text-center">
+            <h4 class="card-title">Automatizacion de datos</h4>
+            <span class="badge bg-secondary badge-pill">Python</span>
+            <span class="badge bg-secondary badge-pill">Selenium</span>
+            <span class="badge bg-secondary badge-pill mb-2">App</span><br />
+            <a href="#" class="read-more-btn link">Read More</a>
           </div>
         </div>
       </div>
-      <div class="row justify-content-evenly mt-4 px-4">
-        <div class="post col-md-4 back all col-10 mt-3 mt-md-0" data-aos="fade-up">
-          <div class="card">
-            <img src="images/calculadora.png" class="card-img-top" alt="..." />
-            <div class="card-body text-center">
-              <h4 class="card-title">Calculadora</h4>
-              <span class="badge bg-secondary badge-pill">Java</span>
-              <span class="badge bg-secondary badge-pill">Nebeans</span>
-              <span class="badge bg-secondary badge-pill mb-2">App</span><br />
-              <a href="#" class="read-more-btn link">Read More</a>
-            </div>
-          </div>
-        </div>
 
-        <div class="post col-md-4 front all col-10 mt-3 mt-md-0" data-aos="fade-up">
-          <div class="card">
-            <img src="images/formulario.png" class="card-img-top" alt="..." />
-            <div class="card-body text-center">
-              <h4 class="card-title">Formulário Web</h4>
-              <span class="badge bg-secondary badge-pill">HTML&CSS</span>
-              <span class="badge bg-secondary badge-pill">JavaScript</span>
-              <span class="badge bg-secondary badge-pill mb-2">Website</span><br />
-              <a href="#" class="read-more-btn link">Read More</a>
-            </div>
-          </div>
-        </div>
 
-        <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
-          <div class="card">
-            <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up"></div>
-            <img src="images/game java.png" class="card-img-top" alt="..." />
-            <div class="card-body text-center">
-              <h4 class="card-title">Game Java</h4>
-              <span class="badge bg-secondary badge-pill">Java</span>
-               <span class="badge bg-secondary badge-pill mb-2">Eclipse</span><br />
-              <a href="#" class="read-more-btn link">Read More</a>
-            </div>
+       <!-- Card 5 -->
+      <div class="post col-md-4 front all col-10 mt-3 mt-md-4" data-aos="fade-up">
+        <div class="card h-100">
+          <img src="images/formulario.png" class="card-img-top media-fixed" alt="Formulário Web" />
+          <div class="card-body text-center">
+            <h4 class="card-title">Formulário Web</h4>
+            <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+            <span class="badge bg-secondary badge-pill">JavaScript</span>
+            <span class="badge bg-secondary badge-pill mb-2">Website</span><br />
+            <a href="#" class="read-more-btn link">Read More</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- portfolio section ends here -->
+
+        <!-- Card 6 -->
+      <div class="post col-md-4 game all col-10 mt-3 mt-md-4" data-aos="fade-up">
+        <div class="card h-100">
+          <img src="images/game java.png" class="card-img-top media-fixed" alt="Game Java" />
+          <div class="card-body text-center">
+            <h4 class="card-title">Game Java</h4>
+            <span class="badge bg-secondary badge-pill">Java</span>
+            <span class="badge bg-secondary badge-pill mb-2">Eclipse</span><br />
+            <a href="#" class="read-more-btn link">Read More</a>
+          </div>
+        </div>
+      </div>
+ </div>
+  </div>
+</section>
+<!-- portfolio section ends here -->
+
 
   <!-- testimonial section starts  
   <section class="testimonial mt-5 pt-5" id="testimonial">
