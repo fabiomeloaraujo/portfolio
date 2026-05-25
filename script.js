@@ -1,88 +1,45 @@
-// htmlcss progress circular bar 
-let htmlProgress = document.querySelector(".html-css"),
-  htmlValue = document.querySelector(".html-progress");
+// Função reutilizável para animar barras circulares
+function animateProgress(selector, valueSelector, endValue, color) {
+  let el = document.querySelector(selector);
+  let val = document.querySelector(valueSelector);
+  if (!el || !val) return;
 
-let htmlStartValue = 0,
-  htmlEndValue = 75,
-  htmlspeed = 30;
+  let current = 0;
+  let speed = 25;
 
-let progresshtml = setInterval(() => {
-  htmlStartValue++;
+  let interval = setInterval(() => {
+    current++;
+    val.textContent = `${current}%`;
+    el.style.background = `conic-gradient(${color} ${current * 3.6}deg, #ededed 0deg)`;
+    if (current >= endValue) clearInterval(interval);
+  }, speed);
+}
 
-  htmlValue.textContent = `${htmlStartValue}%`;
-  htmlProgress.style.background = `conic-gradient(#fca61f ${
-    htmlStartValue * 3.6
-  }deg, #ededed 0deg)`;
+// Dispara as animações quando a secção fica visível
+const skillSection = document.querySelector('.skill');
+let animated = false;
 
-  if (htmlStartValue == htmlEndValue) {
-    clearInterval(progresshtml);
-  }
-}, htmlspeed);
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !animated) {
+      animated = true;
 
-// javasript progress circular bar 
-let javascriptProgress = document.querySelector(".javascript"),
-  javascriptValue = document.querySelector(".javascript-progress");
+      // Business Central / AL — 70%
+      animateProgress('.bc-al', '.bc-al-progress', 70, '#6f34fe');
 
-let javascriptStartValue = 0,
-  javascriptEndValue = 70,
-  jsspeed = 30;
+      // Python — 65%
+      animateProgress('.python-skill', '.python-progress', 65, '#fca61f');
 
-let progressjs = setInterval(() => {
-  javascriptStartValue++;
+      // SQL — 75%
+      animateProgress('.sql-skill', '.sql-progress', 75, '#20c997');
 
-  javascriptValue.textContent = `${javascriptStartValue}%`;
-  javascriptProgress.style.background = `conic-gradient(#7d2ae8 ${
-    javascriptStartValue * 3.6
-  }deg, #ededed 0deg)`;
+      // Flutter — 55%
+      animateProgress('.flutter-skill', '.flutter-progress', 55, '#3f396d');
+    }
+  });
+}, { threshold: 0.3 });
 
-  if (javascriptStartValue == javascriptEndValue) {
-    clearInterval(progressjs);
-  }
-}, jsspeed);
-
-// php progress circular bar 
-let phpProgress = document.querySelector(".php"),
-  phpValue = document.querySelector(".php-progress");
-
-let phpStartValue = 0,
-  phpEndValue = 70,
-  phpspeed = 30;
-
-let progressphp = setInterval(() => {
-  phpStartValue++;
-
-  phpValue.textContent = `${phpStartValue}%`;
-  phpProgress.style.background = `conic-gradient(#20c997 ${
-    phpStartValue * 3.6
-  }deg, #ededed 0deg)`;
-
-  if (phpStartValue == phpEndValue) {
-    clearInterval(progressphp);
-  }
-}, phpspeed);
-
-// reactjs progress circular bar 
-let reactProgress = document.querySelector(".reactjs"),
-  reactValue = document.querySelector(".reactjs-progress");
-
-let reactStartValue = 0,
-  reactEndValue = 85,
-  rjsspeed = 30;
-
-let progressreact = setInterval(() => {
-  reactStartValue++;
-
-  reactValue.textContent = `${reactStartValue}%`;
-  reactProgress.style.background = `conic-gradient(#3f396d ${
-    reactStartValue * 3.6
-  }deg, #ededed 0deg)`;
-
-  if (reactStartValue == reactEndValue) {
-    clearInterval(progressreact);
-  }
-}, rjsspeed);
-
-
+if (skillSection) observer.observe(skillSection);
 // filter using javascript
 $(document).ready(function () {
   $(".filter-item").click(function () {
